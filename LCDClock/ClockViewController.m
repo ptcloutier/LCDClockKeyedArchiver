@@ -26,6 +26,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    
     // this not DRY
     Digit *firstDigit = [[[NSBundle mainBundle] loadNibNamed:@"Digit" owner:self
                                                      options:nil] objectAtIndex:0];
@@ -175,17 +176,16 @@
 
 
 -(void)ampmStatus {
+    
     if ((self.pHourFormat == [NSNumber numberWithInt:0])||(self.pHourFormat == nil)){  // Standard time
         if (((self.firstDigitValue == 1 ) && (self.secondDigitValue >= 2)) || (self.firstDigitValue == 2)){
             [self.am setHidden:YES];
             [self.pm setHidden:NO];
-        }
-        else {
+        }else{
             [self.am setHidden:NO];
             [self.pm setHidden:YES];
         }
-    }
-    else {
+    }else{
         [self.am setHidden:YES];  // Military time
         [self.pm setHidden:YES];
     }
@@ -196,8 +196,7 @@
 
     if ((self.pHourFormat == [NSNumber numberWithInt:0])||(self.pHourFormat == nil)){
         [self standardTime];
-    }
-    else{
+    }else{
         [self militaryTime];
     }
 }
@@ -254,7 +253,7 @@
 }
 
 
--(void)standardTime { // just subtract 12  
+-(void)standardTime { // subtract 12  
     
         if ((self.firstDigitValue == 1) && ( self.secondDigitValue > 2)){
             self.secondDigitValue -= 2;

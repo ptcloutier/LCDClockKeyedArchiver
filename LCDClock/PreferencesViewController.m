@@ -71,7 +71,6 @@
     NSString *filePath = [documentsDirectoryPath stringByAppendingPathComponent:@"userSettings.plist"];
     
     [dataForPlist writeToFile:filePath atomically:YES];
-    
 }
 
 
