@@ -3,6 +3,6 @@ Timekeeper app with a traditional LCD face. Using the NSData/NSTime APIs, displa
 keyed archives.
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/15159970/20323461/d44ab354-ab4a-11e6-992e-634f49e5a16c.gif
-" width="670"/>
+" width="370"/>
 </p>
 
